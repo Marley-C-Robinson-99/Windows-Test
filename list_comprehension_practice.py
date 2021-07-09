@@ -24,6 +24,7 @@ capitalized_fruit = [fruit.capitalize() for fruit in fruits]
 # Exercise 3 - Use a list comprehension to make a variable named fruits_with_more_than_two_vowels. Hint: You'll need a way to check if something is a vowel.
 fruits_with_more_than_one_vowels = [f.lower() for f in fruits if (f.count('a') + f.count('e') + f.count('i') + f.count('o') + f.count('u')) > 2]
 print(fruits_with_more_than_one_vowels)
+
 # Exercise 4 - make a variable named fruits_with_only_two_vowels. The result should be ['mango', 'kiwi', 'strawberry']
 fruits_with_only_two_vowels = [f.lower() for f in fruits if f.count('a') + f.count('e') + f.count('i') + f.count('o') + f.count('u') == 2]
 print(fruits_with_only_two_vowels)
@@ -77,5 +78,5 @@ def is_prime(n):
     elif n == 2:
         return True
 primes = [n for n in numbers if is_prime(n)]
-
 print(primes)
+
