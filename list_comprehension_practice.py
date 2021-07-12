@@ -1,3 +1,4 @@
+#%%
 # 17 list comprehension problems in python
 
 fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
@@ -16,15 +17,18 @@ numbers_plus_one = [number + 1 for number in numbers]
 output = []
 for fruit in fruits:
     output.append(fruit.upper())
-    
+#%%
 # Exercise 1 - rewrite the above example code using list comprehension syntax. Make a variable named uppercased_fruits to hold the output of the list comprehension. Output should be ['MANGO', 'KIWI', etc...]
 uppercased_fruit = [fruit.upper() for fruit in fruits]
+#%%
 # Exercise 2 - create a variable named capitalized_fruits and use list comprehension syntax to produce output like ['Mango', 'Kiwi', 'Strawberry', etc...]
-capitalized_fruit = [fruit.capitalize() for fruit in fruits]
+capitalized_fruit = [fruit.title() for fruit in fruits]
+print(capitalized_fruit)
+#%%
 # Exercise 3 - Use a list comprehension to make a variable named fruits_with_more_than_two_vowels. Hint: You'll need a way to check if something is a vowel.
 fruits_with_more_than_one_vowels = [f.lower() for f in fruits if (f.count('a') + f.count('e') + f.count('i') + f.count('o') + f.count('u')) > 2]
 print(fruits_with_more_than_one_vowels)
-
+#%%
 # Exercise 4 - make a variable named fruits_with_only_two_vowels. The result should be ['mango', 'kiwi', 'strawberry']
 fruits_with_only_two_vowels = [f.lower() for f in fruits if f.count('a') + f.count('e') + f.count('i') + f.count('o') + f.count('u') == 2]
 print(fruits_with_only_two_vowels)

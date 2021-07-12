@@ -1,3 +1,4 @@
+#%%
 students = [
     {
         "id": "100001",
@@ -116,7 +117,17 @@ students = [
         "pets": [{"species": "dog", "age": 6}],
     },
 ]
+
 stud_count = len(students)
+print("Student count is", stud_count)
+############################
 light_coff = len([c['coffee_preference'] for c in students if c['coffee_preference'] == 'light'])
-print(stud_count, 
-light_coff)
+print(light_coff)
+dark_coff = len([c['coffee_preference'] for c in students if c['coffee_preference'] == 'dark'])
+print(dark_coff)
+med_coff = len([c['coffee_preference'] for c in students if c['coffee_preference'] == 'medium'])
+print(med_coff)
+#%%
+dark_coff = len([c['coffee_preference'] for c in students if c['coffee_preference'] == 'dark'])
+print(dark_coff)
+#%%
