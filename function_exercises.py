@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 def is_two(num):
-    return num == 2 ^ num == '2'
+    return num == 2 or num == '2'
+print(is_two(2))
 #%%
 
 def is_vowel(strng):
@@ -59,14 +60,20 @@ def get_letter_grade(grade):
         return("A")
 #%%
 def normalize_name(name):
-    newname = []
+    newname = ""
     namestrp = name.strip()
     for char in namestrp:
         if (char.isnumeric() == True) or (char.isalpha()) or (char == " "):
-                newname.append(char)
-    normal_name = "".join(newname)
-    normal_name = normal_name.replace(" ", "_")
+                newname += char
+    normal_name = newname.replace(" ", "_")
     return normal_name.lower()
-print(normalize_name("    3453Marley Robinson    "))
-print(normalize_name("      Marley   Robinson46546    "))
-print(normalize_name("    Marley Robinson  "))
+#%%
+def cumulative_sum(nums):
+    lst1 = []
+    n = 0
+    for num in range(0,len(nums)):
+        n += nums[num]
+        lst1.append(n)
+    return lst1
+        
+print(cumulative_sum([10, 320, 10]))
