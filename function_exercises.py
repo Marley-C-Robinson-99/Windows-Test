@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-def is_two(num):
-    return num == 2 or num == '2'
+def is_two(num): 
+    return num == 2 or num == '2' #Checking for string or int
 print(is_two(2))
 #%%
 
@@ -16,39 +16,39 @@ def is_consonant(l):
 
 def cap(word):
     if word[0] != ('aeiouAEIOU'):
-        return word.title()
+        return word.title() #Used ttitlecase to capitalize first word in case of SSV in value
     else:
         return word
 #%%
 
 def calculate_tip(bill, tip):
-    total = 0
-    total += (tip * bill)
+    total = 0 #setting base var to 0
+    total += (tip * bill) #Math for calc tim  + total
     return total + total
 
 #%%
 
 def apply_discount(price, d):
-    return price * (d / 100)
+    return price * (d / 100) #assuming a whole int input for d, converts percentage to decima
 
 print(apply_discount(10, 15))
 #%%
 def handle_commas(num):
-    nums = num.split(",")
-    return "".join(nums)
+    nums = num.split(",") #splitting along commas
+    return "".join(nums) #Rejoining the list insto a str
     
 print(handle_commas("100,000"))
 #%%
 def remove_vowels(word):
-    new_word =[]
+    new_word =[] #Empty list for use later
     for letter in word:
-        if is_vowel(letter) == False:
-            new_word.append(letter)
-    return "".join(new_word)
+        if is_vowel(letter) == False: #calling a previous function
+            new_word.append(letter) #If word is not vowel, append to empty list
+    return "".join(new_word) #joins list into a string
 print(remove_vowels("Apple"))
 #%%
 def get_letter_grade(grade):
-    if grade > 0 and grade < 60:
+    if grade > 0 and grade < 60: #doing grade ranges from F to A
         return("F")
     elif grade >= 60 and grade < 70:
         return("D")
@@ -60,20 +60,20 @@ def get_letter_grade(grade):
         return("A")
 #%%
 def normalize_name(name):
-    newname = ""
-    namestrp = name.strip()
-    for char in namestrp:
-        if (char.isnumeric() == True) or (char.isalpha()) or (char == " "):
-                newname += char
-    normal_name = newname.replace(" ", "_")
-    return normal_name.lower()
+    newname = "" #init empty str
+    namestrp = name.strip() #stripping name value
+    for char in namestrp: 
+        if (char.isnumeric() == True) or (char.isalpha()) or (char == " "): #checking for chars, nums, and spaces
+                newname += char #if is num, char, or space, add to empty str
+    normal_name = newname.replace(" ", "_") #replacing spaces with underscores
+    return normal_name.lower() #Finally lowercasing
 #%%
 def cumulative_sum(nums):
-    lst1 = []
-    n = 0
+    lst1 = [] #init empty list
+    n = 0 #init empty var
     for num in range(0,len(nums)):
-        n += nums[num]
-        lst1.append(n)
+        n += nums[num] #for each number, += n to nums[index], then moves on and does the same with n = the sum of previous numbers
+        lst1.append(n) #appending n to the list with each iteration
     return lst1
         
-print(cumulative_sum([10, 320, 10]))
+print(cumulative_sum([10, 27.5, 10]))
